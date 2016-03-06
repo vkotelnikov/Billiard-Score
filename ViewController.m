@@ -10,12 +10,18 @@
 
 @interface ViewController ()
 
+
+
 @end
 
 @implementation ViewController
+@synthesize timerLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    timerLabel.text = @"00.00";
+    running = FALSE;
+    startDate = [NSDate date];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -83,6 +89,29 @@
 }
 
 - (IBAction)TimerSwitch:(id)sender {
+    if (!running) {
+        running = TRUE;
+        [sender setTitle:@"Остановить" forState:UIControlStateNormal];
+        if (stopTimer==nil) {
+            stopTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+        }
+    } else {
+        running = FALSE;
+        [sender setTitle:@"Начать" forState:UIControlStateNormal];
+        [stopTimer invalidate];
+        stopTimer = nil;
+    }
+}
+
+-(void) updateTimer{
+    NSDate *currentDate = [NSDate date];
+    NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:startDate];
+    NSDate *timerDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    NSString *timeString = [dateFormatter stringFromDate:timerDate];
+    timerLabel.text = timeString;
     
 }
 @end

@@ -9,18 +9,25 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+{
+    NSTimer *stopTimer;
+    NSDate *startDate;
+    BOOL running;
+}
 @property (weak, nonatomic) IBOutlet UILabel *score;
 @property (weak, nonatomic) IBOutlet UILabel *score2;
 @property (weak, nonatomic) IBOutlet UILabel *frame;
 @property (weak, nonatomic) IBOutlet UILabel *frame2;
-@property (weak, nonatomic) IBOutlet UILabel *timer;
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 
 - (IBAction)IncreaseScore:(id)sender;
 - (IBAction)DecreaseScore:(id)sender;
 - (IBAction)IncreaseScore2:(id)sender;
 - (IBAction)DecreaseScore2:(id)sender;
 - (IBAction)TimerSwitch:(id)sender;
+
+-(void)updateTimer;
+
 
 
 @end

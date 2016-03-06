@@ -132,19 +132,25 @@
                                     <rect key="frame" x="75" y="208" width="180" height="67"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpx-y8-Ju5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpx-y8-Ju5">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="backgroundColor" red="1" green="0.87718213115929955" blue="0.31978604022205237" alpha="0.54648714539007093" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="503" width="180" height="21"/>
+                                    <rect key="frame" x="75" y="445" width="180" height="38"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0I-Hg-ezm">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Начать">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="499" width="180" height="30"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="39"/>
+                                    <rect key="frame" x="40" y="491" width="254" height="69"/>
                                 </variation>
                                 <connections>
                                     <action selector="TimerSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6XC-Kz-BWM"/>
@@ -178,7 +184,7 @@
                         <outlet property="frame2" destination="PHo-Fl-7wG" id="yaR-fg-s07"/>
                         <outlet property="score" destination="nKj-sV-OM5" id="UFd-wJ-7n7"/>
                         <outlet property="score2" destination="ag1-nK-pdW" id="vrM-ph-u0y"/>
-                        <outlet property="timer" destination="dpx-y8-Ju5" id="uaA-O9-k8o"/>
+                        <outlet property="timerLabel" destination="dpx-y8-Ju5" id="hsa-cb-hz8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
