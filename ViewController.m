@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    timerLabel.text = @"00.00";
     running = FALSE;
     startDate = [NSDate date];
     // Do any additional setup after loading the view, typically from a nib.
@@ -35,6 +34,7 @@
     int frame = [self.frame.text intValue];
     score++;
     if (score > 7) {
+        [self resetTimer];
         score = 0;
         self.frame.text = [NSString stringWithFormat:@"%d", frame+1];
     }
@@ -64,6 +64,7 @@
     int frame = [self.frame2.text intValue];
     score++;
     if (score > 7) {
+        [self resetTimer];
         score = 0;
         self.frame2.text = [NSString stringWithFormat:@"%d", frame+1];
     }
@@ -112,6 +113,14 @@
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSString *timeString = [dateFormatter stringFromDate:timerDate];
     timerLabel.text = timeString;
-    
+}
+
+-(void)resetTimer{
+    [stopTimer invalidate];
+    stopTimer = nil;
+    startDate = [NSDate date];
+    timerLabel.text = @"00:00";
+    [self TimerSwitch:_timerSwitchLabel];
+    running = FALSE;
 }
 @end

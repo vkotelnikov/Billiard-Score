@@ -13,12 +13,14 @@
     NSTimer *stopTimer;
     NSDate *startDate;
     BOOL running;
+    
 }
 @property (weak, nonatomic) IBOutlet UILabel *score;
 @property (weak, nonatomic) IBOutlet UILabel *score2;
 @property (weak, nonatomic) IBOutlet UILabel *frame;
 @property (weak, nonatomic) IBOutlet UILabel *frame2;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (weak, nonatomic) IBOutlet UIButton *timerSwitchLabel;
 
 - (IBAction)IncreaseScore:(id)sender;
 - (IBAction)DecreaseScore:(id)sender;
@@ -27,7 +29,7 @@
 - (IBAction)TimerSwitch:(id)sender;
 
 -(void)updateTimer;
-
+-(void)resetTimer;
 
 
 @end
