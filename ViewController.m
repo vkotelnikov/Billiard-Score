@@ -34,7 +34,9 @@
     int frame = [self.frame.text intValue];
     score++;
     if (score > 7) {
+        if (running){
         [self resetTimer];
+        }
         score = 0;
         self.frame.text = [NSString stringWithFormat:@"%d", frame+1];
     }
@@ -64,7 +66,9 @@
     int frame = [self.frame2.text intValue];
     score++;
     if (score > 7) {
+        if (running){
         [self resetTimer];
+        }
         score = 0;
         self.frame2.text = [NSString stringWithFormat:@"%d", frame+1];
     }
@@ -93,7 +97,8 @@
     if (!running) {
         running = TRUE;
         [sender setTitle:@"Остановить" forState:UIControlStateNormal];
-        if (stopTimer==nil) {
+        startDate = [NSDate date];
+        if (stopTimer == nil) {
             stopTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
         }
     } else {
@@ -101,6 +106,7 @@
         [sender setTitle:@"Начать" forState:UIControlStateNormal];
         [stopTimer invalidate];
         stopTimer = nil;
+//        startDate = [NSDate date];
     }
 }
 
@@ -109,7 +115,7 @@
     NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:startDate];
     NSDate *timerDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"HH:mm"];
+    [dateFormatter setDateFormat:@"HH:mm:ss"];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSString *timeString = [dateFormatter stringFromDate:timerDate];
     timerLabel.text = timeString;
@@ -118,7 +124,6 @@
 -(void)resetTimer{
     [stopTimer invalidate];
     stopTimer = nil;
-    startDate = [NSDate date];
     timerLabel.text = @"00:00";
     [self TimerSwitch:_timerSwitchLabel];
     running = FALSE;
