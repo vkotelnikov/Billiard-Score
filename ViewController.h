@@ -14,13 +14,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *score2;
 @property (weak, nonatomic) IBOutlet UILabel *frame;
 @property (weak, nonatomic) IBOutlet UILabel *frame2;
-@property (weak, nonatomic) IBOutlet UILabel *timer;
 
 - (IBAction)IncreaseScore:(id)sender;
 - (IBAction)DecreaseScore:(id)sender;
 - (IBAction)IncreaseScore2:(id)sender;
 - (IBAction)DecreaseScore2:(id)sender;
-- (IBAction)TimerSwitch:(id)sender;
 
 
 @end

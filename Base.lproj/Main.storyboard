@@ -132,24 +132,6 @@
                                     <rect key="frame" x="75" y="208" width="180" height="67"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpx-y8-Ju5">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="503" width="180" height="21"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0I-Hg-ezm">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="499" width="180" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="TimerSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6XC-Kz-BWM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85175832080617275" green="0.95937516635818165" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -158,8 +140,6 @@
                                 <exclude reference="Bpt-Xe-UsY"/>
                                 <exclude reference="PHo-Fl-7wG"/>
                                 <exclude reference="kBg-TN-m3D"/>
-                                <exclude reference="dpx-y8-Ju5"/>
-                                <exclude reference="p0I-Hg-ezm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -168,8 +148,6 @@
                                 <include reference="Bpt-Xe-UsY"/>
                                 <include reference="PHo-Fl-7wG"/>
                                 <include reference="kBg-TN-m3D"/>
-                                <include reference="dpx-y8-Ju5"/>
-                                <include reference="p0I-Hg-ezm"/>
                             </mask>
                         </variation>
                     </view>
@@ -178,7 +156,6 @@
                         <outlet property="frame2" destination="PHo-Fl-7wG" id="yaR-fg-s07"/>
                         <outlet property="score" destination="nKj-sV-OM5" id="UFd-wJ-7n7"/>
                         <outlet property="score2" destination="ag1-nK-pdW" id="vrM-ph-u0y"/>
-                        <outlet property="timer" destination="dpx-y8-Ju5" id="uaA-O9-k8o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

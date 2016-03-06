@@ -81,8 +81,4 @@
     }
     self.score2.text = [NSString stringWithFormat:@"%d", score];
 }
-
-- (IBAction)TimerSwitch:(id)sender {
-    
-}
 @end
