@@ -91,13 +91,13 @@
 - (IBAction)TimerSwitch:(id)sender {
     if (!running) {
         running = TRUE;
-        [sender setTitle:@"Stop" forState:UIControlStateNormal];
+        [sender setTitle:@"Остановить" forState:UIControlStateNormal];
         if (stopTimer==nil) {
             stopTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
         }
     } else {
         running = FALSE;
-        [sender setTitle:@"Start" forState:UIControlStateNormal];
+        [sender setTitle:@"Начать" forState:UIControlStateNormal];
         [stopTimer invalidate];
         stopTimer = nil;
     }
