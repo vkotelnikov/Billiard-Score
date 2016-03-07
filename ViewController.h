@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameData.h"
+#import "GameData2.h"
 
 @interface ViewController : UIViewController
 {
     NSTimer *stopTimer;
     NSDate *startDate;
     BOOL running;
-    
 }
 @property (weak, nonatomic) IBOutlet UILabel *score;
 @property (weak, nonatomic) IBOutlet UILabel *score2;
