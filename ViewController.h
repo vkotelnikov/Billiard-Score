@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameData.h"
+#import "GameData2.h"
 
 @interface ViewController : UIViewController
 {
@@ -19,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *frame;
 @property (weak, nonatomic) IBOutlet UILabel *frame2;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (weak, nonatomic) IBOutlet UIButton *timerSwitchLabel;
 
 - (IBAction)IncreaseScore:(id)sender;
 - (IBAction)DecreaseScore:(id)sender;
@@ -27,7 +30,7 @@
 - (IBAction)TimerSwitch:(id)sender;
 
 -(void)updateTimer;
-
+-(void)resetTimer;
 
 
 @end

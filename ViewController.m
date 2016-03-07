@@ -19,9 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    timerLabel.text = @"00.00";
     running = FALSE;
     startDate = [NSDate date];
+    GameData *data = [GameData data];
+    [data load];
+    self.frame.text = [NSString stringWithFormat:@"%d", data.highscore];
+    
+    GameData2 *data2 = [GameData2 data];
+    [data2 load];
+    self.frame2.text = [NSString stringWithFormat:@"%d", data2.highscore];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -35,8 +42,14 @@
     int frame = [self.frame.text intValue];
     score++;
     if (score > 7) {
+        if (running){
+        [self resetTimer];
+        }
         score = 0;
         self.frame.text = [NSString stringWithFormat:@"%d", frame+1];
+        GameData *data = [GameData data];
+        data.highscore = frame+1;
+        [data save];
     }
     self.score.text = [NSString stringWithFormat:@"%d", score];
 }
@@ -47,8 +60,14 @@
     if(frame){
     score--;
         if (score < 0) {
+            if (running) {
+                [self resetTimer];
+            }
             score = 0;
             self.frame.text = [NSString stringWithFormat:@"%d", frame-1];
+            GameData *data = [GameData data];
+            data.highscore = frame-1;
+            [data save];
         }
     } else {
         score--;
@@ -64,8 +83,14 @@
     int frame = [self.frame2.text intValue];
     score++;
     if (score > 7) {
+        if (running){
+        [self resetTimer];
+        }
         score = 0;
         self.frame2.text = [NSString stringWithFormat:@"%d", frame+1];
+        GameData2 *data = [GameData2 data];
+        data.highscore = frame+1;
+        [data save];
     }
     self.score2.text = [NSString stringWithFormat:@"%d", score];
 }
@@ -76,8 +101,14 @@
     if (frame) {
     score--;
         if (score < 0) {
+            if(running){
+            [self resetTimer];
+            }
             score = 0;
             self.frame2.text = [NSString stringWithFormat:@"%d", frame-1];
+            GameData2 *data = [GameData2 data];
+            data.highscore = frame+1;
+            [data save];
         }
     } else {
         score--;
@@ -92,7 +123,8 @@
     if (!running) {
         running = TRUE;
         [sender setTitle:@"Остановить" forState:UIControlStateNormal];
-        if (stopTimer==nil) {
+        startDate = [NSDate date];
+        if (stopTimer == nil) {
             stopTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
         }
     } else {
@@ -100,6 +132,7 @@
         [sender setTitle:@"Начать" forState:UIControlStateNormal];
         [stopTimer invalidate];
         stopTimer = nil;
+//        startDate = [NSDate date];
     }
 }
 
@@ -108,10 +141,17 @@
     NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:startDate];
     NSDate *timerDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"HH:mm"];
+    [dateFormatter setDateFormat:@"HH:mm:ss"];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSString *timeString = [dateFormatter stringFromDate:timerDate];
     timerLabel.text = timeString;
-    
+}
+
+-(void)resetTimer{
+    [stopTimer invalidate];
+    stopTimer = nil;
+    timerLabel.text = @"00:00:00";
+    [self TimerSwitch:_timerSwitchLabel];
+    running = FALSE;
 }
 @end
