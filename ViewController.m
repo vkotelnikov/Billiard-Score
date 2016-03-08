@@ -16,6 +16,7 @@
 
 @implementation ViewController
 @synthesize timerLabel;
+@synthesize timerSwitchLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -99,7 +100,7 @@
     int score = [self.score2.text intValue];
     int frame = [self.frame2.text intValue];
     if (frame) {
-    score--;
+        score--;
         if (score < 0) {
             if(running){
             [self resetTimer];
@@ -122,7 +123,7 @@
 - (IBAction)TimerSwitch:(id)sender {
     if (!running) {
         running = TRUE;
-        [sender setTitle:@"Остановить" forState:UIControlStateNormal];
+        [sender setTitle:@"Сброс" forState:UIControlStateNormal];
         startDate = [NSDate date];
         if (stopTimer == nil) {
             stopTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
@@ -130,9 +131,23 @@
     } else {
         running = FALSE;
         [sender setTitle:@"Начать" forState:UIControlStateNormal];
+        pauseDate = [NSDate date];
         [stopTimer invalidate];
         stopTimer = nil;
-//        startDate = [NSDate date];
+    }
+}
+
+- (IBAction)pause:(id)sender {
+    if (running) {
+        [self pauseTimer];
+        [timerSwitchLabel setTitle:@"Начать" forState:UIControlStateNormal];
+        stopTimer = nil;
+    } else {
+        running = TRUE;
+        NSDate *currentDate = [NSDate date];
+        NSTimeInterval pauseInterval = [currentDate timeIntervalSinceDate:pauseDate];
+        startDate = [NSDate dateWithTimeInterval:pauseInterval sinceDate:startDate];
+        stopTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     }
 }
 
@@ -151,7 +166,13 @@
     [stopTimer invalidate];
     stopTimer = nil;
     timerLabel.text = @"00:00:00";
-    [self TimerSwitch:_timerSwitchLabel];
+    [self TimerSwitch:timerSwitchLabel];
+    running = FALSE;
+}
+
+-(void)pauseTimer{
+    pauseDate = [NSDate date];
+    [stopTimer invalidate];
     running = FALSE;
 }
 @end

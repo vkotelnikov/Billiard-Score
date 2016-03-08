@@ -14,6 +14,7 @@
 {
     NSTimer *stopTimer;
     NSDate *startDate;
+    NSDate *pauseDate;
     BOOL running;
 }
 @property (weak, nonatomic) IBOutlet UILabel *score;
@@ -28,9 +29,12 @@
 - (IBAction)IncreaseScore2:(id)sender;
 - (IBAction)DecreaseScore2:(id)sender;
 - (IBAction)TimerSwitch:(id)sender;
+- (IBAction)pause:(id)sender;
 
 -(void)updateTimer;
 -(void)resetTimer;
+-(void)pauseTimer;
+//-(void)releaseTimer;
 
 
 @end
