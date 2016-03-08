@@ -16,12 +16,7 @@
                     <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_0774.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="edw-US-kXs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.10980392160000001" green="0.36470588240000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.66473633578219327" green="0.94509803920000002" blue="0.68377674430793978" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -30,7 +25,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="IMG_0774.jpg" width="2448" height="3264"/>
-    </resources>
 </document>
