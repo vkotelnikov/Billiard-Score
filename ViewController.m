@@ -22,6 +22,7 @@
     [super viewDidLoad];
     running = FALSE;
     startDate = [NSDate date];
+    pauseDate = startDate;
     GameData *data = [GameData data];
     [data load];
     self.frame.text = [NSString stringWithFormat:@"%d", data.highscore];
