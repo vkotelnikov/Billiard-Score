@@ -1,20 +1,18 @@
 //
-//  ViewController.m
+//  odinrazokViewController.m
 //  Billiard Score
 //
-//  Created by Vyacheslav Kotelnikov on 04.03.16.
+//  Created by Vyacheslav Kotelnikov on 10.03.16.
 //  Copyright © 2016 Vyacheslav Kotelnikov. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "odinrazokViewController.h"
 
-@interface ViewController ()
-
-
+@interface odinrazokViewController ()
 
 @end
 
-@implementation ViewController
+@implementation odinrazokViewController
 @synthesize timerLabel;
 @synthesize timerSwitchLabel;
 
@@ -23,13 +21,6 @@
     running = FALSE;
     startDate = [NSDate date];
     pauseDate = startDate;
-    GameData *data = [GameData data];
-    [data load];
-    self.frame.text = [NSString stringWithFormat:@"%d", data.highscore];
-    
-    GameData2 *data2 = [GameData2 data];
-    [data2 load];
-    self.frame2.text = [NSString stringWithFormat:@"%d", data2.highscore];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -45,13 +36,10 @@
     score++;
     if (score > 7) {
         if (running){
-        [self resetTimer];
+            [self resetTimer];
         }
         score = 0;
         self.frame.text = [NSString stringWithFormat:@"%d", frame+1];
-        GameData *data = [GameData data];
-        data.highscore = frame+1;
-        [data save];
     }
     self.score.text = [NSString stringWithFormat:@"%d", score];
 }
@@ -60,16 +48,13 @@
     int score = [self.score.text intValue];
     int frame = [self.frame.text intValue];
     if(frame){
-    score--;
+        score--;
         if (score < 0) {
             if (running) {
                 [self resetTimer];
             }
             score = 0;
             self.frame.text = [NSString stringWithFormat:@"%d", frame-1];
-            GameData *data = [GameData data];
-            data.highscore = frame-1;
-            [data save];
         }
     } else {
         score--;
@@ -86,13 +71,10 @@
     score++;
     if (score > 7) {
         if (running){
-        [self resetTimer];
+            [self resetTimer];
         }
         score = 0;
         self.frame2.text = [NSString stringWithFormat:@"%d", frame+1];
-        GameData2 *data = [GameData2 data];
-        data.highscore = frame+1;
-        [data save];
     }
     self.score2.text = [NSString stringWithFormat:@"%d", score];
 }
@@ -104,13 +86,10 @@
         score--;
         if (score < 0) {
             if(running){
-            [self resetTimer];
+                [self resetTimer];
             }
             score = 0;
             self.frame2.text = [NSString stringWithFormat:@"%d", frame-1];
-            GameData2 *data = [GameData2 data];
-            data.highscore = frame-1;
-            [data save];
         }
     } else {
         score--;
