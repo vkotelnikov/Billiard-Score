@@ -34,6 +34,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+    animated = YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -109,7 +113,7 @@
             score = 0;
             self.frame2.text = [NSString stringWithFormat:@"%d", frame-1];
             GameData2 *data = [GameData2 data];
-            data.highscore = frame+1;
+            data.highscore = frame-1;
             [data save];
         }
     } else {
