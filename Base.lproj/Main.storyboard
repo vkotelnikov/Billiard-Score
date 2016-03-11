@@ -32,53 +32,42 @@
                                     <rect key="frame" x="51" y="208" width="42" height="70"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4i-YZ-EiV">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4i-YZ-EiV">
                                 <rect key="frame" x="35" y="268" width="71" height="63"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
-                                <state key="normal" title="+">
+                                <state key="normal" image="Plus-96.png">
                                     <color key="titleColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="37" y="309" width="71" height="63"/>
+                                    <rect key="frame" x="37" y="306" width="70" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="IncreaseScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l0V-Az-tOF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-cP-W7f">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-cP-W7f">
                                 <rect key="frame" x="35" y="333" width="71" height="63"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
-                                <state key="normal" title="-">
+                                <state key="normal" title="-" image="Minus-96.png">
                                     <color key="titleColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="37" y="374" width="71" height="63"/>
+                                    <rect key="frame" x="37" y="380" width="70" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="DecreaseScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="taL-Hx-Awv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GL-gy-NKd">
-                                <rect key="frame" x="218" y="268" width="71" height="63"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.071741149340000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="309" width="71" height="63"/>
-                                </variation>
-                                <connections>
-                                    <action selector="IncreaseScore2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTN-nl-pza"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5M-iJ-7fX">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5M-iJ-7fX">
                                 <rect key="frame" x="218" y="333" width="71" height="63"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
-                                <state key="normal" title="-">
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" image="Minus-96.png">
                                     <color key="titleColor" red="1" green="0.0" blue="0.071741149340000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="374" width="71" height="63"/>
+                                    <rect key="frame" x="220" y="380" width="70" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="DecreaseScore2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3TE-av-NJ2"/>
@@ -91,6 +80,15 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="235" y="208" width="42" height="70"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-Xe-UsY">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="26" y="69" width="93" height="67"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHo-Fl-7wG">
@@ -171,19 +169,24 @@
                                     <segue destination="8Ty-Lz-0sw" kind="presentation" id="3mt-5k-lZH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-Xe-UsY">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GL-gy-NKd">
+                                <rect key="frame" x="218" y="268" width="71" height="63"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
+                                <state key="normal" image="Plus-96.png">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.071741149340000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="26" y="69" width="93" height="67"/>
+                                    <rect key="frame" x="220" y="306" width="70" height="70"/>
                                 </variation>
-                            </label>
+                                <connections>
+                                    <action selector="IncreaseScore2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTN-nl-pza"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85175832080617275" green="0.95937516635818165" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="Bpt-Xe-UsY"/>
                                 <exclude reference="PHo-Fl-7wG"/>
                                 <exclude reference="kBg-TN-m3D"/>
                                 <exclude reference="dpx-y8-Ju5"/>
@@ -191,11 +194,11 @@
                                 <exclude reference="qtq-TA-v9W"/>
                                 <exclude reference="p0I-Hg-ezm"/>
                                 <exclude reference="Khl-No-Bub"/>
-                                <exclude reference="Bpt-Xe-UsY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="Bpt-Xe-UsY"/>
                                 <include reference="PHo-Fl-7wG"/>
                                 <include reference="kBg-TN-m3D"/>
                                 <include reference="dpx-y8-Ju5"/>
@@ -203,7 +206,6 @@
                                 <include reference="qtq-TA-v9W"/>
                                 <include reference="p0I-Hg-ezm"/>
                                 <include reference="Khl-No-Bub"/>
-                                <include reference="Bpt-Xe-UsY"/>
                             </mask>
                         </variation>
                     </view>
@@ -234,38 +236,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlu-To-WLq">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Великая Битва"/>
+                            <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" image="IMG_0774.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-Lj-LO5">
+                                <rect key="frame" x="0.0" y="-3264" width="2448" height="3264"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="269" width="105" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="aEt-0O-a47"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FK-gx-Vrh">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FK-gx-Vrh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                                 <state key="normal" title="Один разок"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="216" y="269" width="84" height="30"/>
+                                    <rect key="frame" x="87" y="324" width="146" height="123"/>
                                 </variation>
                                 <connections>
                                     <segue destination="Pne-Kn-eop" kind="presentation" id="UKg-yS-sIJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlu-To-WLq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <color key="tintColor" red="0.52286543957740361" green="0.79487074607329844" blue="0.32779097560990472" alpha="0.36497118794326239" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Великая Битва"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                    <rect key="frame" x="87" y="95" width="146" height="123"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="aEt-0O-a47"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="rlu-To-WLq"/>
+                                <exclude reference="SZh-Lj-LO5"/>
                                 <exclude reference="7FK-gx-Vrh"/>
+                                <exclude reference="rlu-To-WLq"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="rlu-To-WLq"/>
+                                <include reference="SZh-Lj-LO5"/>
                                 <include reference="7FK-gx-Vrh"/>
+                                <include reference="rlu-To-WLq"/>
                             </mask>
                         </variation>
                     </view>
@@ -306,56 +320,42 @@
                                             <rect key="frame" x="51" y="208" width="42" height="70"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD3-Di-lWE">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD3-Di-lWE">
                                         <rect key="frame" x="35" y="268" width="71" height="63"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
-                                        <state key="normal" title="+">
+                                        <state key="normal" image="Plus-96.png">
                                             <color key="titleColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="37" y="309" width="71" height="63"/>
+                                            <rect key="frame" x="37" y="306" width="70" height="70"/>
                                         </variation>
                                         <connections>
                                             <action selector="IncreaseScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6Z-UX-lWQ"/>
                                             <action selector="IncreaseScore:" destination="Pne-Kn-eop" eventType="touchUpInside" id="Ylp-Ne-bC6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34Y-j0-FsF">
-                                        <rect key="frame" x="35" y="333" width="71" height="63"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="37" y="374" width="71" height="63"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="DecreaseScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1L-8K-ptC"/>
-                                            <action selector="DecreaseScore:" destination="Pne-Kn-eop" eventType="touchUpInside" id="e29-UL-Xp5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yT-y3-o5G">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yT-y3-o5G">
                                         <rect key="frame" x="218" y="268" width="71" height="63"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
-                                        <state key="normal" title="+">
+                                        <state key="normal" image="Plus-96.png">
                                             <color key="titleColor" red="1" green="0.0" blue="0.071741149340000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="220" y="309" width="71" height="63"/>
+                                            <rect key="frame" x="221" y="306" width="70" height="70"/>
                                         </variation>
                                         <connections>
                                             <action selector="IncreaseScore2:" destination="Pne-Kn-eop" eventType="touchUpInside" id="EdV-Xe-9VR"/>
                                             <action selector="IncreaseScore2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zvM-Tm-CdO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Od7-JX-YHq">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Od7-JX-YHq">
                                         <rect key="frame" x="218" y="333" width="71" height="63"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
-                                        <state key="normal" title="-">
+                                        <state key="normal" image="Minus-96.png">
                                             <color key="titleColor" red="1" green="0.0" blue="0.071741149340000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="220" y="374" width="71" height="63"/>
+                                            <rect key="frame" x="220" y="380" width="70" height="70"/>
                                         </variation>
                                         <connections>
                                             <action selector="DecreaseScore2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZEQ-MT-gTT"/>
@@ -460,6 +460,20 @@
                                             <segue destination="8Ty-Lz-0sw" kind="presentation" id="g1n-Rj-9kW"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34Y-j0-FsF">
+                                        <rect key="frame" x="35" y="333" width="71" height="63"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="70"/>
+                                        <state key="normal" image="Minus-96.png">
+                                            <color key="titleColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="37" y="380" width="70" height="70"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="DecreaseScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1L-8K-ptC"/>
+                                            <action selector="DecreaseScore:" destination="Pne-Kn-eop" eventType="touchUpInside" id="e29-UL-Xp5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85175832080000002" green="0.95937516639999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
@@ -518,8 +532,10 @@
     </scenes>
     <resources>
         <image name="IMG_0774.jpg" width="2448" height="3264"/>
+        <image name="Minus-96.png" width="96" height="96"/>
+        <image name="Plus-96.png" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3mt-5k-lZH"/>
+        <segue reference="g1n-Rj-9kW"/>
     </inferredMetricsTieBreakers>
 </document>
