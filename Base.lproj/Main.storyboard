@@ -93,22 +93,13 @@
                                     <rect key="frame" x="235" y="208" width="42" height="70"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-Xe-UsY">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="51" y="69" width="42" height="67"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHo-Fl-7wG">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.85098039215686272" green="0.15686274509803921" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="235" y="69" width="41" height="67"/>
+                                    <rect key="frame" x="213" y="69" width="85" height="67"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Партия" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBg-TN-m3D">
@@ -180,11 +171,19 @@
                                     <segue destination="8Ty-Lz-0sw" kind="presentation" id="3mt-5k-lZH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-Xe-UsY">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.41568627450000001" green="0.96078431369999995" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="26" y="69" width="93" height="67"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85175832080617275" green="0.95937516635818165" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Bpt-Xe-UsY"/>
                                 <exclude reference="PHo-Fl-7wG"/>
                                 <exclude reference="kBg-TN-m3D"/>
                                 <exclude reference="dpx-y8-Ju5"/>
@@ -192,11 +191,11 @@
                                 <exclude reference="qtq-TA-v9W"/>
                                 <exclude reference="p0I-Hg-ezm"/>
                                 <exclude reference="Khl-No-Bub"/>
+                                <exclude reference="Bpt-Xe-UsY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Bpt-Xe-UsY"/>
                                 <include reference="PHo-Fl-7wG"/>
                                 <include reference="kBg-TN-m3D"/>
                                 <include reference="dpx-y8-Ju5"/>
@@ -204,6 +203,7 @@
                                 <include reference="qtq-TA-v9W"/>
                                 <include reference="p0I-Hg-ezm"/>
                                 <include reference="Khl-No-Bub"/>
+                                <include reference="Bpt-Xe-UsY"/>
                             </mask>
                         </variation>
                     </view>

@@ -34,10 +34,6 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
--(void)viewDidDisappear:(BOOL)animated{
-    animated = YES;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
