@@ -32,6 +32,7 @@
     self.frame2.text = [NSString stringWithFormat:@"%d", data2.highscore];
     
     // Do any additional setup after loading the view, typically from a nib.
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,33 +40,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)IncreaseScore:(id)sender {
     int score = [self.score.text intValue];
+    int score2 = [self.score2.text intValue];
     int frame = [self.frame.text intValue];
     score++;
     if (score > 7) {
-        if (running){
-        [self resetTimer];
-        }
         score = 0;
+        score2 = 0;
         self.frame.text = [NSString stringWithFormat:@"%d", frame+1];
         GameData *data = [GameData data];
         data.highscore = frame+1;
         [data save];
     }
     self.score.text = [NSString stringWithFormat:@"%d", score];
+    self.score2.text = [NSString stringWithFormat:@"%d", score2];
 }
 
 - (IBAction)DecreaseScore:(id)sender {
     int score = [self.score.text intValue];
+    int score2 = [self.score2.text intValue];
     int frame = [self.frame.text intValue];
     if(frame){
     score--;
         if (score < 0) {
-            if (running) {
-                [self resetTimer];
-            }
             score = 0;
+            score2 = 0;
             self.frame.text = [NSString stringWithFormat:@"%d", frame-1];
             GameData *data = [GameData data];
             data.highscore = frame-1;
@@ -74,39 +75,42 @@
     } else {
         score--;
         if (score < 0) {
+            score2 = 0;
             score = 0;
         }
     }
     self.score.text = [NSString stringWithFormat:@"%d", score];
+    self.score2.text = [NSString stringWithFormat:@"%d", score2];
+    
 }
 
 - (IBAction)IncreaseScore2:(id)sender {
     int score = [self.score2.text intValue];
+    int score2 = [self.score.text intValue];
     int frame = [self.frame2.text intValue];
     score++;
     if (score > 7) {
-        if (running){
-        [self resetTimer];
-        }
         score = 0;
+        score2 = 0;
         self.frame2.text = [NSString stringWithFormat:@"%d", frame+1];
         GameData2 *data = [GameData2 data];
         data.highscore = frame+1;
         [data save];
     }
     self.score2.text = [NSString stringWithFormat:@"%d", score];
+    self.score.text = [NSString stringWithFormat:@"%d", score2];
+    
 }
 
 - (IBAction)DecreaseScore2:(id)sender {
     int score = [self.score2.text intValue];
+    int score2 = [self.score.text intValue];
     int frame = [self.frame2.text intValue];
     if (frame) {
         score--;
         if (score < 0) {
-            if(running){
-            [self resetTimer];
-            }
             score = 0;
+            score2 = 0;
             self.frame2.text = [NSString stringWithFormat:@"%d", frame-1];
             GameData2 *data = [GameData2 data];
             data.highscore = frame-1;
@@ -116,9 +120,12 @@
         score--;
         if (score < 0) {
             score = 0;
+            score2 = 0;
         }
     }
     self.score2.text = [NSString stringWithFormat:@"%d", score];
+    self.score.text = [NSString stringWithFormat:@"%d", score2];
+    
 }
 
 - (IBAction)TimerSwitch:(id)sender {
@@ -161,6 +168,7 @@
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSString *timeString = [dateFormatter stringFromDate:timerDate];
     timerLabel.text = timeString;
+    
 }
 
 -(void)resetTimer{
